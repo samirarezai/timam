@@ -1,0 +1,46 @@
+.menu {
+  background-color: #3948ab;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  width: 40%;
+  transition: all .4s;
+  overflow: hidden;
+  opacity: 1;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  @media screen and (min-width: 768px) {
+    width: 30%;
+  }
+}
+
+.active {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.dark {
+  padding-right: 15px;
+  color: #c3c4ca;
+  line-height: 2.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+}
+.border-item{
+  border-bottom: 1px solid #c3c4ca1a;
+}
+.right-50 {
+  right: -50%;
+  opacity: 0;
+}
+.imageNav{
+  max-width: 30px;
+}
+.imageNav svg{
+    fill:#fff !important;
+
+
+}

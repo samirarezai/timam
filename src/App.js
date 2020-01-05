@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Code from "./components/login/code";
+import './assets/scss/publicComponents.scss';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Profile from "./components/login/profile";
+import Team from "./components/login/team";
+import Notfound from "./components/publicComponents/notfound";
+import Home from "./components/home/home";
+import QrLogin from "./components/qr/qrlogin";
+import MapBuy from './components/map/map';
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+    render() {
+        return (
+            <Router>
+                <Switch>
+                    <Route path="/" exact component={Code}/>
+                    <Route path="/profile" exact component={Profile}/>
+                    <Route path="/team" exact component={Team}/>
+                    <Route path="/home" exact component={Home}/>
+                    <Route path="/qrlogin" exact component={QrLogin}/>
+                    <Route path="/map" exact component={MapBuy}/>
+                    <Route path="*" exact component={Notfound}/>
+                </Switch>
+
+
+            </Router>
+        )
+            ;
+    }
 }
 
 export default App;
